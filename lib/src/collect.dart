@@ -63,6 +63,7 @@ main() {
   List<int> list2 = List();
   list2.addAll(list);
   print(list2);
+  print(list[0]);
 }
 
 void printMap(Map<String, String> map) {

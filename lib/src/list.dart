@@ -1,6 +1,6 @@
 main(List<String> args) {
   List<String> list = ['denglt'];
-  List<Object> list2 = [1,2];
+  List<Object> list2 = [1, 2];
   print(list.runtimeType);
   print(list2.runtimeType);
   print(list2);
@@ -9,8 +9,11 @@ main(List<String> args) {
   print(list.runtimeType);
   print(list2.runtimeType);
 
-    List<Object> list3 = [1,2];
-    // list = list3; is error
-
-
+  List<Object> list3 = [1, 2];
+  // list = list3; is error
+  list3.isEmpty;
+  list3.isNotEmpty;
+  String s = 'sdfsdfsdfdsf '
+      'by denglt';
+  print(s);
 }

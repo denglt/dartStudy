@@ -1,5 +1,4 @@
 import 'package:meta/meta.dart';
-import 'package:meta/dart2js.dart';
 
 main() {
   enableFlags(bold: false, hidden: true);
@@ -26,6 +25,16 @@ main() {
 
   assert(add2(3) == 5);
   assert(add4(3) == 7);
+
+  funParam("study", denglt);
+  funParam2("study", denglt);
+  print(funParam.runtimeType);
+  print(funParam is Function);
+
+  test('denglt', 0, bFlag: false);
+  test2('denglt', 0);
+  test3('denglt', 0);
+  bind('address', 0, backlog: 0);
 }
 
 // Optional named parameters
@@ -44,6 +53,16 @@ String say(String from, String msg, [String device]) {
   }
   return result;
 }
+
+void test(name, int i, {bool bFlag = true}) {}
+void test2(name, int i, {bool bFlag}) {}
+void test3(ame, int i, [bool bFlag = true]) {
+  print("test3 $bFlag");
+}
+
+bind(address, int port,
+        {int backlog: 0, bool v6Only: false, bool shared: false}) =>
+    print(1);
 
 void doStuff(
     {List<int> list = const [1, 2, 3],
@@ -66,3 +85,25 @@ void printElement(int element) {
 Function makeAdder(num addBy) {
   return (num i) => addBy + i;
 }
+
+void funParam(String str, String deal(String v)) {
+  String vv = deal(str);
+  print(vv);
+}
+
+void funParam2(String str, Function deal) {
+  String vv = deal(str);
+  print(vv);
+}
+
+String deal2(String v) {
+  return v + "  by deal2";
+}
+
+String denglt(String v) {
+  return v + "  by denglt";
+}
+
+typedef Deal = String Function(String s);
+
+typedef Compare<T> = int Function(T a, T b);

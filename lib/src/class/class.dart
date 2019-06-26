@@ -90,6 +90,8 @@ class Person {
   Person.fromJson(Map data) {
     print('in Person');
   }
+  // Callable classes
+  call() => "dddd";
 }
 
 class Employee extends Person {
