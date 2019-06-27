@@ -20,7 +20,7 @@ Iterable<int> naturalsDownFrom(int n) sync* {
 main(List<String> args) async {
   var iter = naturalsTo(10);
   for (var i in iter){
-    print(i);
+    print(i); 
   }
 
   var asyncNatural = asynchronousNaturalsTo(10);
