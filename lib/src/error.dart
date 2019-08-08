@@ -3,7 +3,7 @@ main(List<String> args) {
     // ···
     throw 'is error';
   } on Exception catch (e) {
-    print('Exception details:\n $e');
+    print('Exception details ->\n $e');
   } catch (e, s) {
     print('Exception details:\n $e');
     print('Stack trace:\n $s');

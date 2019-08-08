@@ -1,6 +1,5 @@
 import 'dart:async';
 
-import 'dart:cli';
 
 main(List<String> args) async {
   var f = new Future(() => print("denglt"));
@@ -9,10 +8,14 @@ main(List<String> args) async {
   print("2");
   print("3");
   print("4");
-  await ff;
+//  await ff;
   print("5");
   //print(await ff);
+  ff.then((t){
+     print('--------->' + t.toString());
+  });
   print(ff);
+  print('-------end--------------');
 }
 
 int compute(int max) {
@@ -25,7 +28,7 @@ int compute(int max) {
   return total;
 }
 
-Future<int> asyncCompute(int max) {
+Future<int> asyncCompute(int max) async{
   print("begin async compute");
   return Future(() => compute(max));
 }

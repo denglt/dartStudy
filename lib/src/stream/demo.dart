@@ -5,4 +5,5 @@ main(List<String> args) async {
 
   var counterStream2 = Stream.fromIterable([1, 2, 3]);
   await counterStream2.forEach(print);
+    
 }

@@ -10,6 +10,9 @@ mixin B {
   String b;
 }
 
+class MyB with B{
+
+}
 mixin C {
   String c;
 }
@@ -42,6 +45,7 @@ mixin DD on D {
 class Y extends D with DD {}
 
 main(List<String> args) {
+ // B(); error
   Z z = Z();
   // z.a = "A";
   z.b = "B";

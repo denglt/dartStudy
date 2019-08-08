@@ -15,6 +15,6 @@ main(List<String> args) async {
       }
     }
   } else {
-    print("is dir");
+    print("is not dir");
   }
 }
