@@ -70,10 +70,3 @@ class Penson {
   }
 }
 
-
-class Customer extends JsonObject
-{
-  int Id;
-  String Name;
-  String Addr;
-}
